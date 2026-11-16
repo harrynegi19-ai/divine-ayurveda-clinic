@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | Divine Ayurveda Clinic</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="index.html" class="logo">
+                Divine Ayurveda
+                <span>And Panchkarma Clinic</span>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="booking.html">Appointment</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Booking Section -->
+    <main class="section">
+
+        <div class="container">
+
+            <p class="section-label">Online Appointment</p>
+
+            <h1>Book Your Appointment</h1>
+
+            <p>
+                Fill in the details below. The clinic will contact you
+                to confirm the appointment.
+            </p>
+
+
+            <form id="bookingForm" class="booking-form">
+
+                <!-- Patient Name -->
+                <div class="form-group">
+                    <label for="patientName">
+                        Patient Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="patientName"
+                        name="patientName"
+                        placeholder="Enter patient name"
+                        required
+                    >
+                </div>
+
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter 10-digit phone number"
+                        pattern="[0-9]{10}"
+                        required
+                    >
+                </div>
+
+
+                <!-- Age -->
+                <div class="form-group">
+                    <label for="age">
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        min="1"
+                        max="120"
+                        placeholder="Enter age"
+                        required
+                    >
+                </div>
+
+
+                <!-- Service -->
+                <div class="form-group">
+                    <label for="service">
+                        Select Service
+                    </label>
+
+                    <select id="service" name="service" required>
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <option value="General Consultation">
+                            General Consultation
+                        </option>
+
+                        <option value="Swedan">
+                            Swedan
+                        </option>
+
+                        <option value="Nasya">
+                            Nasya
+                        </option>
+
+                        <option value="Kati Basti">
+                            Kati Basti
+                        </option>
+
+                        <option value="Janu Basti">
+                            Janu Basti
+                        </option>
+
+                        <option value="Akshi Tarpan">
+                            Akshi Tarpan
+                        </option>
+
+                        <option value="Pottali Swedan">
+                            Pottali Swedan
+                        </option>
+
+                        <option value="Online Consultation">
+                            Online Consultation
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- Date -->
+                <div class="form-group">
+                    <label for="appointmentDate">
+                        Preferred Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="appointmentDate"
+                        name="appointmentDate"
+                        required
+                    >
+                </div>
+
+
+                <!-- Time -->
+                <div class="form-group">
+                    <label for="appointmentTime">
+                        Preferred Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="appointmentTime"
+                        name="appointmentTime"
+                        required
+                    >
+                </div>
+
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">
+                        Message or Symptoms
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write a short message"
+                    ></textarea>
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit" class="btn primary-btn">
+                    Submit Appointment Request
+                </button>
+
+                <p id="bookingMessage"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container">
+            <p>
+                © 2026 Divine Ayurveda And Panchkarma Clinic.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <script src="js/booking.js"></script>
+
+</body>
+</html>

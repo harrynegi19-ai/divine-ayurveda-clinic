@@ -1,0 +1,378 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Website Colors */
+:root {
+    --dark-green: #123d25;
+    --green: #1f6b3a;
+    --light-green: #eaf5e8;
+    --cream: #fffdf4;
+    --gold: #c49a35;
+    --text-dark: #243127;
+    --white: #ffffff;
+}
+
+
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+
+/* Reusable Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Navigation */
+.navbar {
+    background: var(--dark-green);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.logo {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.logo span {
+    display: block;
+    font-size: 13px;
+    color: #dceccf;
+}
+
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    color: #f4d477;
+}
+
+
+/* Hero Section */
+.hero {
+    padding: 70px 0;
+    background:
+        linear-gradient(
+            120deg,
+            #eff8df,
+            #fffdf4
+        );
+}
+
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+
+.small-heading,
+.section-label {
+    color: var(--green);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+
+h1 {
+    color: var(--dark-green);
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+
+h1 span {
+    color: var(--green);
+}
+
+
+h2 {
+    color: var(--dark-green);
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+
+h3 {
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+
+.hero-text p {
+    margin-bottom: 25px;
+}
+
+
+.hero-image img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.primary-btn {
+    background: var(--green);
+    color: var(--white);
+}
+
+
+.primary-btn:hover {
+    background: var(--dark-green);
+}
+
+
+.secondary-btn {
+    border: 2px solid var(--green);
+    color: var(--green);
+}
+
+
+.secondary-btn:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+
+/* General Sections */
+.section {
+    padding: 75px 0;
+}
+
+
+.light-section {
+    background: var(--light-green);
+}
+
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+
+/* Doctor Card */
+.doctor-card {
+    background: var(--white);
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #d5e3d0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.doctor-icon {
+    font-size: 90px;
+    margin-bottom: 0px;
+}
+
+
+/* Service Cards */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+
+.service-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 5px solid var(--green);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+
+.service-card:hover {
+    transform: translateY(-4px);
+    transition: 0.2s ease;
+}
+
+
+/* Appointment Box */
+.appointment-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #f4e8bd;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+
+/* Contact */
+.contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+
+.contact-details a {
+    color: var(--green);
+    font-weight: bold;
+}
+
+
+/* Footer */
+.footer {
+    background: var(--dark-green);
+    color: var(--white);
+    text-align: center;
+    padding: 25px 0;
+}
+
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .nav-content {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content,
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+    /* Booking Form */
+
+.booking-form {
+    max-width: 750px;
+    margin-top: 35px;
+    background: var(--white);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbdac5;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 2px rgba(31, 107, 58, 0.12);
+}
+
+
+#bookingMessage {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+}
