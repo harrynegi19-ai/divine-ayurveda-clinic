@@ -3,9 +3,6 @@ const path = require("path");
 
 const app = express();
 
-const PORT = 5000;
-
-
 // Allow Express to read JSON data
 app.use(express.json());
 
@@ -42,9 +39,8 @@ app.post("/api/appointments", (req, res) => {
 });
 
 
-// Start server
-app.listen(PORT, () => {
-    console.log(
-        `Server running at http://localhost:${PORT}`
-    );
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
 });
